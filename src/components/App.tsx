@@ -53,7 +53,7 @@ class App extends React.Component<Record<string, unknown>, undefined> {
                         </div>
                     </SidebarComponent>
                     <div id="main-content container-fluid col-md-12 ">
-                    <div>
+                    <div id="main-area">
                           <Main></Main>
                           <span></span>
                           <hr className="rounded"></hr>

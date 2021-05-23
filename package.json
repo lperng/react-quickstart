@@ -71,6 +71,7 @@
   "dependencies": {
     "@syncfusion/ej2-data": "^19.1.63",
     "@syncfusion/ej2-react-grids": "^19.1.64",
-    "@syncfusion/ej2-react-navigations": "^19.1.63"
+    "@syncfusion/ej2-react-navigations": "^19.1.63",
+    "@syncfusion/ej2-react-popups": "^19.1.64"
   }
 }

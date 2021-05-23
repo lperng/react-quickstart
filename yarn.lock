@@ -1310,7 +1310,7 @@
   dependencies:
     "@syncfusion/ej2-compression" "~19.1.63"
 
-"@syncfusion/ej2-popups@~19.1.63", "@syncfusion/ej2-popups@~19.1.64":
+"@syncfusion/ej2-popups@~19.1.63", "@syncfusion/ej2-popups@~19.1.64", "@syncfusion/ej2-popups@19.1.64":
   "integrity" "sha512-JtddKA6k45vaxFpBZautlHCNkwBZ+RKVrKNeHJvH79hegEFv4QmhavkOBpuBdBKqE/Tj1PXAK1JVgSzXK17oxw=="
   "resolved" "https://registry.npmjs.org/@syncfusion/ej2-popups/-/ej2-popups-19.1.64.tgz"
   "version" "19.1.64"
@@ -1342,6 +1342,15 @@
     "@syncfusion/ej2-base" "~19.1.63"
     "@syncfusion/ej2-navigations" "19.1.63"
     "@syncfusion/ej2-react-base" "~19.1.63"
+
+"@syncfusion/ej2-react-popups@^19.1.64":
+  "integrity" "sha512-dXvWbI2gJ9sfJx2YIAalRE+dIrah5cwtl/xX+4hGOrKuddob6pLR4gJbSE6QgsYHNih3X2t7wpXxWXaMRn6hPQ=="
+  "resolved" "https://registry.npmjs.org/@syncfusion/ej2-react-popups/-/ej2-react-popups-19.1.64.tgz"
+  "version" "19.1.64"
+  dependencies:
+    "@syncfusion/ej2-base" "~19.1.64"
+    "@syncfusion/ej2-popups" "19.1.64"
+    "@syncfusion/ej2-react-base" "~19.1.64"
 
 "@syncfusion/ej2-splitbuttons@~19.1.63":
   "integrity" "sha512-y9MV/YPXQ3ZXpmoNZgqBw9JCY2ECoSD4bUjL714h/+NI381fZVE3jOjJb7G1NkbEKJ353JUUs7Sg/XVMx4LDYA=="

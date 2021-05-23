@@ -13,7 +13,12 @@ hr.rounded {
     border-radius: 5px;
   }
 
-  #container {
+#main-area {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#container {
     visibility: hidden;
 }
 
