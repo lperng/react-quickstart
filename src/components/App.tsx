@@ -9,6 +9,7 @@ import { Inject, Page, PageSettingsModel, Sort, SortSettingsModel, FilterSetting
 const reactLogo = require("./../assets/img/react_logo.svg");
 import "./../assets/scss/App.scss";
 import { DataManager } from "@syncfusion/ej2-data";
+import Main from "./Main";
 
 class App extends React.Component<Record<string, unknown>, undefined> {
   public data2 = new DataManager({
@@ -40,16 +41,8 @@ class App extends React.Component<Record<string, unknown>, undefined> {
             </ColumnsDirective>
             <Inject services={[Page, Sort, Filter, Group]} />
           </GridComponent>
-          <h2>Second Grid</h2>
-          <GridComponent dataSource={this.data2} height={315}>
-            <ColumnsDirective>
-                <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right"/>
-                <ColumnDirective field='CustomerID' headerText='Customer ID' width='150'/>
-                <ColumnDirective field='ShipCity' headerText='Ship City' width='150'/>
-                <ColumnDirective field='ShipName' headerText='Ship Name' width='150'/>
-            </ColumnsDirective>
-           </GridComponent>
-           <h3>End of Grid Page</h3>
+          <Main/>
+        
       </div>
       
     );
