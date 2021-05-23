@@ -46,6 +46,7 @@ export default class Main extends React.Component<Record<string, unknown>, undef
         <div className="control-section">
         <GridComponent dataSource={this.data2} height= {400} gridLines="Both" 
           ref={grid => this.gridInstance = grid} 
+          allowExcelExport={true} allowPdfExport={true}
           toolbar={this.toolbarOptions} toolbarClick={this.clickHandler.bind(this)}>
           <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
