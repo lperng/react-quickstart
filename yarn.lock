@@ -1215,7 +1215,7 @@
   dependencies:
     "@syncfusion/ej2-file-utils" "~19.1.63"
 
-"@syncfusion/ej2-data@~19.1.63":
+"@syncfusion/ej2-data@^19.1.63", "@syncfusion/ej2-data@~19.1.63":
   "integrity" "sha512-b/CDLzLHpdL57/RX7FW8rB6DYtozxbAPBa1OWpzFs/cnf084D2XpSnigaplmbsFwFTQ1O+aaDYWEBn892kn/gw=="
   "resolved" "https://registry.npmjs.org/@syncfusion/ej2-data/-/ej2-data-19.1.63.tgz"
   "version" "19.1.63"
@@ -1291,7 +1291,7 @@
     "@syncfusion/ej2-buttons" "~19.1.63"
     "@syncfusion/ej2-data" "~19.1.63"
 
-"@syncfusion/ej2-navigations@~19.1.63":
+"@syncfusion/ej2-navigations@~19.1.63", "@syncfusion/ej2-navigations@19.1.63":
   "integrity" "sha512-lOoHok8B0gKYSYE7anAURgi6EQv8Nrs4ueNaOHLRddR24Py+NYptUGupGYnsXxsWtIXPx8LNz1od4hAFnxIfng=="
   "resolved" "https://registry.npmjs.org/@syncfusion/ej2-navigations/-/ej2-navigations-19.1.63.tgz"
   "version" "19.1.63"
@@ -1318,7 +1318,7 @@
     "@syncfusion/ej2-base" "~19.1.64"
     "@syncfusion/ej2-buttons" "~19.1.63"
 
-"@syncfusion/ej2-react-base@~19.1.64":
+"@syncfusion/ej2-react-base@~19.1.63", "@syncfusion/ej2-react-base@~19.1.64":
   "integrity" "sha512-J3n4gprNU/45hu2Rh1OLxwlWtbMyxExFwIheuazyHj3uokL6NYFeJuAoqJcIV/0+2IVgr8BTPmrO/ALX3EmegQ=="
   "resolved" "https://registry.npmjs.org/@syncfusion/ej2-react-base/-/ej2-react-base-19.1.64.tgz"
   "version" "19.1.64"
@@ -1333,6 +1333,15 @@
     "@syncfusion/ej2-base" "~19.1.64"
     "@syncfusion/ej2-grids" "19.1.64"
     "@syncfusion/ej2-react-base" "~19.1.64"
+
+"@syncfusion/ej2-react-navigations@^19.1.63":
+  "integrity" "sha512-EtEnzEqsZ1iJfehiv6/NJmPXzIhHi6KTmBOr4RqLR0HNMshFgUIyAODKTkUWQa7T1SXQPXjUY6oS55WqyIMmKw=="
+  "resolved" "https://registry.npmjs.org/@syncfusion/ej2-react-navigations/-/ej2-react-navigations-19.1.63.tgz"
+  "version" "19.1.63"
+  dependencies:
+    "@syncfusion/ej2-base" "~19.1.63"
+    "@syncfusion/ej2-navigations" "19.1.63"
+    "@syncfusion/ej2-react-base" "~19.1.63"
 
 "@syncfusion/ej2-splitbuttons@~19.1.63":
   "integrity" "sha512-y9MV/YPXQ3ZXpmoNZgqBw9JCY2ECoSD4bUjL714h/+NI381fZVE3jOjJb7G1NkbEKJ353JUUs7Sg/XVMx4LDYA=="
