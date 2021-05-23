@@ -1,27 +1,32 @@
 import { SidebarComponent } from "@syncfusion/ej2-react-navigations";
 import * as React from "react";
 import { hot } from "react-hot-loader";
-import '../App.css';
+import "../App.css";
 import "./../assets/scss/App.scss";
 import Main from "./Main";
 import Main1 from "./Main1";
 
 class App extends React.Component<Record<string, unknown>, undefined> {
-  dockBar: any;
+  dockBar: SidebarComponent;
   constructor(props) {
     super(props);
     this.toggleClick = this.toggleClick.bind(this);
   }
   // Toggle(Open/Close) the Sidebar
   toggleClick() {
-      this.dockBar.toggle();
+    this.dockBar.toggle();
   }
   public render() {
+    /* eslint-disable */ 
     return (
       <div className="control-section">
                 <div id="wrapper">
-                    
-                    <SidebarComponent id="dockSidebar" ref={Sidebar => this.dockBar = Sidebar} enableDock={true} dockSize="72px" width="220px">
+          <SidebarComponent
+            id="dockSidebar"
+            ref={(Sidebar) => (this.dockBar = Sidebar)}
+            enableDock={true}
+            dockSize="72px"
+            width="220px">
                         <div className="dock">
                             <ul>
                                 <li className="sidebar-item" id="toggle" onClick={this.toggleClick}>
