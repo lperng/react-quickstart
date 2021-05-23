@@ -23,7 +23,6 @@ export default class Main extends React.Component<Record<string, unknown>, undef
                 <ColumnDirective field='ShipName' headerText='Ship Name' width='150'/>
             </ColumnsDirective>
            </GridComponent>
-           <h3>End of Data Grid</h3>
       </div>
       
     );
