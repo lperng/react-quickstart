@@ -2,7 +2,7 @@
 import * as React from "react";
 import { hot } from "react-hot-loader";
 import "../App.css";
-import { ColumnDirective, ColumnsDirective, Filter, GridComponent, Group, GroupSettingsModel } from '@syncfusion/ej2-react-grids';
+import { ColumnDirective, ColumnsDirective, ExcelExport, Filter, GridComponent, Group, GroupSettingsModel, PdfExport } from '@syncfusion/ej2-react-grids';
 import { Inject, Page, PageSettingsModel, Sort, SortSettingsModel, FilterSettingsModel, Toolbar } from '@syncfusion/ej2-react-grids';
 import { DataManager } from "@syncfusion/ej2-data";
 import { DialogComponent } from '@syncfusion/ej2-react-popups';
@@ -11,7 +11,7 @@ export default class Main extends React.Component<Record<string, unknown>, undef
   private gridInstance: GridComponent;
   private alertDialogInstance: DialogComponent;
   public toolbarOptions: any = [{ text: 'Copy', tooltipText: 'Copy', prefixIcon: 'e-copy', id: 'copy' }, 
-        { text: 'Copy With Header', tooltipText: 'Copy With Header', prefixIcon: 'e-copy', id: 'copyHeader' }];
+        { text: 'Copy With Header', tooltipText: 'Copy With Header', prefixIcon: 'e-copy', id: 'copyHeader' }, 'ExcelExport', 'PdfExport', 'CsvExport'];
   private visible = false;
   private animationSettings: any = { effect: 'None', duration: 400, delay:0 };
   public selectionsettings: Object = { type: 'Multiple' };
@@ -28,15 +28,30 @@ export default class Main extends React.Component<Record<string, unknown>, undef
   });
 
   clickHandler(args: any) {
-    if(this.gridInstance.getSelectedRecords().length>0) {
-        let withHeader: boolean = false;
-        if (args.item.id === 'copyHeader') {
-            withHeader = true;
+
+    switch (args.item.text) {
+      case 'PDF Export':
+        this.gridInstance.pdfExport();
+        break;
+      case 'Excel Export':
+        this.gridInstance.excelExport();
+        break;
+      case 'CSV Export':
+        this.gridInstance.csvExport();
+        break;
+      default:
+        if(this.gridInstance.getSelectedRecords().length>0) {
+          let withHeader: boolean = false;
+          if (args.item.id === 'copyHeader') {
+              withHeader = true;
+          }
+          this.gridInstance.copy(withHeader);
+        } else {
+          this.alertDialogInstance.show();
         }
-        this.gridInstance.copy(withHeader);
-    } else {
-        this.alertDialogInstance.show();
+        break;
     }
+
   }
 
   public render() {
@@ -46,7 +61,8 @@ export default class Main extends React.Component<Record<string, unknown>, undef
         <div className="control-section">
         <GridComponent dataSource={this.data2} height= {400} gridLines="Both" 
           ref={grid => this.gridInstance = grid} 
-          allowExcelExport={true} allowPdfExport={true}
+          allowExcelExport={true} allowPdfExport={true} selectionSettings= {this.selectionsettings}
+
           toolbar={this.toolbarOptions} toolbarClick={this.clickHandler.bind(this)}>
           <ColumnsDirective>
             <ColumnDirective field='OrderID' headerText='Order ID' width='120' textAlign="Right" />
@@ -54,7 +70,7 @@ export default class Main extends React.Component<Record<string, unknown>, undef
             <ColumnDirective field='ShipCity' headerText='Ship City' width='150' />
             <ColumnDirective field='ShipName' headerText='Ship Name' width='150' />
           </ColumnsDirective>
-          
+          <Inject services={[Page, Sort, Filter, Group, Toolbar,ExcelExport, PdfExport,]} />
         </GridComponent>
         </div>
         <DialogComponent id="alertDialog" header='Copy with Header' visible={this.visible} 

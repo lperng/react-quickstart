@@ -67,6 +67,7 @@ export default class Main1 extends React.Component<Record<string, unknown>, unde
         <h2>Grid - from Local Data</h2>
         <GridComponent dataSource={data} allowPaging={true} pageSettings={ this.pageSettings }
           ref={ grid => this.gridInstance = grid} 
+          allowExcelExport = {true} allowPdfExport={true}
           toolbar={this.toolbarOptions} toolbarClick={this.clickHandler.bind(this)}
           allowGrouping={true} groupSettings={ this.groupSettings }
           filterSettings = {this.filterSettings} gridLines='Both'
